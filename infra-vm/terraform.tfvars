@@ -1,0 +1,5 @@
+project_id = "rp-dev-450309"
+machine_type = "n1-standard-1"
+zone = "us-central1-a"
+image =  "ubuntu-os-cloud/ubuntu-2004-lts"
+name  = "dev-vm-01"
