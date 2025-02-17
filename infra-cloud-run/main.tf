@@ -8,7 +8,7 @@ resource "google_cloud_run_v2_service" "default" {
   template {
     service_account = "cloud-run-deployment-dev@rp-dev-450309.iam.gserviceaccount.com"
     containers {
-      image = "us-central1-docker.pkg.dev/rp-dev-450309/rp-dev-net-repo/dotnet8-api:d4d1956"
+      image = "us-central1-docker.pkg.dev/rp-dev-450309/rp-dev-net-repo/dotnet8-api:d727895"
       startup_probe {
         http_get {
           path = "/health"
@@ -21,7 +21,6 @@ resource "google_cloud_run_v2_service" "default" {
     }
   }
 }
-
 resource "google_cloud_run_service_iam_member" "noauth" {
   project        = google_cloud_run_v2_service.default.project
   location       = google_cloud_run_v2_service.default.location
